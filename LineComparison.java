@@ -18,9 +18,29 @@ public class LineComparison {
         else
             System.out.println("Line 1 and Line 2 have do not have equal length.");
     }
+
+     static void compareTo(int num1, int num2){
+
+        Integer d3 = Integer.valueOf(num1);
+        Integer d4 = Integer.valueOf(num2);
+        System.out.println("print the length ="+d3);
+        System.out.println("print the length ="+d4);
+
+        int value = d3.compareTo(d4);
+        if(value > 0){
+            System.out.println("the length are greater");
+        } else if (value < 0) {
+            System.out.println("the length are lesser");
+        }else {
+            System.out.println(" the length are equals");
+        }
+
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to the Line And Comparison Programs");
           length(1,1,5,5);
           equalOrNotCheck(2.5,2.5);
+          compareTo(11,10);
     }
+
 }
