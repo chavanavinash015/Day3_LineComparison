@@ -2,11 +2,11 @@ package com.Bridgelabz;
 
 public class LineComparison {
 
-    static void length(int x1 , int y1, int x2, int y2){
+    static double length(int x1 , int y1, int x2, int y2){
 
 
-        double Line = Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
-        System.out.println(Line);
+        double line = Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+        return line;
     }
 
     static void equalOrNotCheck(double lengthline1, double lengthline2){
@@ -19,10 +19,10 @@ public class LineComparison {
             System.out.println("Line 1 and Line 2 have do not have equal length.");
     }
 
-     static void compareTo(int num1, int num2){
+     static void compareTo(double lengthLine1, double lengthLine2){
 
-        Integer d3 = Integer.valueOf(num1);
-        Integer d4 = Integer.valueOf(num2);
+        Double d3 = lengthLine1;
+        Double d4 = lengthLine2;
         System.out.println("print the length ="+d3);
         System.out.println("print the length ="+d4);
 
@@ -36,11 +36,14 @@ public class LineComparison {
         }
 
     }
+
+
     public static void main(String[] args) {
         System.out.println("Welcome to the Line And Comparison Programs");
-          length(1,1,5,5);
-          equalOrNotCheck(2.5,2.5);
-          compareTo(11,10);
+         double length1 = length(1,1,5,5);
+        double length2 =  length(1,2,5,4);
+          equalOrNotCheck(length1, length2);
+          compareTo(length1,length2);
     }
 
 }
